@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandra - Frontend Developer</title>
+    <link rel="stylesheet" type="text/css" href="new.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Sandra</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="profile-container">
+                <img src="project.jpg" alt="Sandra" class="profile-image">
+                <div class="hero-text">
+                    <h1>Sandra Murera</h1>
+                    <h2>Frontend Developer</h2>
+                    <p class="location"><i class="fas fa-map-marker-alt"></i> Kigali, Rwanda</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate frontend developer based in Kigali, specializing in creating beautiful and responsive web experiences. With a keen eye for design and strong technical skills, I bring ideas to life through code.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">30+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="skills-title">My Skills</h3>
+            <div class="skills">
+                <div class="skill">
+                    <span class="skill-name">HTML</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span class="skill-name">CSS</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span class="skill-name">JavaScript</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span class="skill-name">UI/UX Design</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 88%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>My Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Custom websites built with modern technologies and best practices.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Responsive Design</h3>
+                    <p>Websites that look great on all devices and screen sizes.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>UI/UX Design</h3>
+                    <p>Beautiful and intuitive user interfaces that enhance user experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-info">
+                <div class="contact-item" onclick="copyToClipboard('smurera721@gmail.com')">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                        <div class="icon-pulse"></div>
+                    </div>
+                    <div class="contact-text">
+                        <p class="contact-label">Email</p>
+                        <p class="contact-value">smurera721@gmail.com</p>
+                        <span class="copy-tooltip">Click to copy</span>
+                    </div>
+                </div>
+                <div class="contact-item" onclick="copyToClipboard('+250 791 711 521')">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                        <div class="icon-pulse"></div>
+                    </div>
+                    <div class="contact-text">
+                        <p class="contact-label">Phone</p>
+                        <p class="contact-value">+250 791 711 521</p>
+                        <span class="copy-tooltip">Click to copy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sandra Murera. All rights reserved.</p>
+    </footer>
+
+    <script>
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+            const tooltip = event.currentTarget.querySelector('.copy-tooltip');
+            tooltip.textContent = 'Copied!';
+            tooltip.classList.add('show');
+            
+            setTimeout(() => {
+                tooltip.textContent = 'Click to copy';
+                tooltip.classList.remove('show');
+            }, 2000);
+        });
+    }
+    </script>
+</body>
+</html>
